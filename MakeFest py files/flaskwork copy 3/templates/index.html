@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{%block head%} <title>Code Nation</title> {%endblock%}
+
+{%block body%} <div class="content">
+    <h1>Sign Up</h1>
+Please enter your information below. <br>
+
+By pressing submit you are confirming you are happy for CN to contact you regarding our Develop courses via mobile or 
+    <form action='/' method='POST'>
+        Your Name:
+        <input type='text' name='title' id='title' placeholder='Your Name'>
+        E-mail Address:
+        <input type='text' name='genre' id='genre' placeholder='email@address.co.uk'>
+        Contact Number:
+        <input type='text' name='desc' id='desc'>
+        Interest(Coding/Cyber):
+        <input type='text' name='stock' id='stock'>
+        By submitting the information above, you are allowing Code Nation to store your data for the purpose 
+        <input type='checkbox' name="market" id="market">
+        <input type='submit' value='Add New Asset'>
+    </form>
+</div>
+{%endblock%}
