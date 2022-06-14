@@ -63,6 +63,13 @@ def options():
     elif main_option=="3":
         password.login()# the login puzzle
         pin=password.pin
+        if search.seen and password.pass_changed:
+            fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD REMOTE JOIN*** Incorrect password enter \nUser has 999 tries remaining {bcolors.ENDC}\n")
+            time.sleep(2)
+            fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD REMOTE JOIN*** Incorrect password enter \nUser has 999 tries remaining {bcolors.ENDC}\n")
+            fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD REMOTE JOIN*** Incorrect password enter \nUser has 999 tries remaining {bcolors.ENDC}\n")
+            time.sleep(2)
+            fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD REMOTE JOIN*** Incorrect password enter \nUser has 999 tries remaining {bcolors.ENDC}\n")   
         fast_text("What would you like to do? \n")
         options()
     elif main_option=="4":
