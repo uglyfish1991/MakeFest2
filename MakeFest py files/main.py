@@ -67,7 +67,7 @@ def options():
         options()
     elif main_option=="4":
         search.search_a(start_stamp) # the searching
-        if search.seen==True:
+        if search.seen and password.pass_changed:
             fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD REMOTE JOIN*** Incorrect password enter \nUser has 999 tries remaining {bcolors.ENDC}\n")
             time.sleep(2)
             fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD REMOTE JOIN*** Incorrect password enter \nUser has 999 tries remaining {bcolors.ENDC}\n")
