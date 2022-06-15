@@ -31,7 +31,7 @@ def index():
         try:
             db.session.add(new_item)
             db.session.commit()
-            return redirect('/')
+            return redirect(url_for('thanks'))
         except:
             return 'There was an issue with adding the item'
     else:
@@ -43,6 +43,9 @@ def viewing():
     person = Person.query.all()
     return render_template('view.html',person=person)
 
+@app.route('/thanks')
+def thanks():
+    return render_template('thanks.html')
 
 if __name__=="__main__":
     app.run(debug=True)

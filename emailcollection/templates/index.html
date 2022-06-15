@@ -2,25 +2,26 @@
 
 {%block head%} <title>Code Nation</title> {%endblock%}
 
-{%block body%} 
+{%block body%}
 
 <div class="content">
-    <img src="{{ url_for('static', filename='images/long_logo.png')}}">
-    <h1>Sign Up</h1>
-<p> Thanks for visiting us today at Liverpool MakeFest 2022! We hope you had a great day!</p>
-<p> If you'd like to learn more about our courses, please submit your contact details below and our admissions team will be in touch with you!</p>
+    <p> Thanks for visiting us today at Liverpool MakeFest 2022! We hope you had a great day!</p>
+    <p> If you'd like to learn more about our courses, please submit your contact details below and our admissions team
+        will be in touch with you!</p>
     <form action='/' method='POST'>
-        Your Name:
-        <input type='text' name='name' id='name' placeholder='Your Name'>
-        E-mail Address:
-        <input type='text' name='email' id='email' placeholder='email@address.co.uk'>
+            Your Name:<br>
+            <input type='text' name='name' id='name' placeholder='Your Name'>
+            E-mail Address:<br>
+            <input type='text' name='email' id='email' placeholder='email@address.co.uk'>
+
         Contact Number:
-        <input type='text' name='number' id='number'>
-        Interest(Coding/Cyber):
-        <input type='text' name='course' id='course'>
-        By submitting the information above, you are allowing Code Nation to store your data for the purpose 
-        <input type='checkbox' name="market" id="market">
-        <input type='submit' value='Add New Asset'>
+        <input type='text' name='number' id='number' placeholder="Telephone Number">
+        Course Interest:
+        <input type='text' name='course' id='course' placeholder="Coding/Cyber">
+        <p>By submitting the information above, you are allowing Code Nation to store your data for the purpose of contacting you regarding your chosen course. If you would like us to contact you for other marketing purposes (such as other courses, events, and news we think might interest you) please tick the box below. We will not use your information for any other purposes.</p>
+        <p> Yes, please contact me with other marketing information
+        <input type='checkbox' name="market" id="market"></p>
+        <input type='submit' value='Submit Details'>
     </form>
 </div>
 {%endblock%}
