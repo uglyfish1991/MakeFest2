@@ -1,10 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@font-face {
+    font-family: gil-bold;
+    src: url(../fonts/Gilroy-ExtraBold.otf);
+}
 
 *{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'gil-bold', sans-serif;
 }
+
 body {
     background-color:rgb(244, 249, 245);
+}
+
+img{
+    width: 50vw;
 }
 
 table{
@@ -19,6 +27,7 @@ input{
     display: block;
     margin-bottom: 2%;
     padding: 1%;
+    width: 40vw;
 }
 
 input[placeholder]{
