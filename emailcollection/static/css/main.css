@@ -1,3 +1,15 @@
+/*
+
+#########################
+#                       #
+#       Font Rules      #
+#                       #
+#########################
+
+*/
+
+
+
 @font-face {
     font-family: gil-bold;
     src: url(../fonts/Gilroy-ExtraBold.otf);
@@ -7,6 +19,16 @@
     font-family: gil-lite;
     src: url(../fonts/Gilroy-Light.otf);
 }
+
+/*
+
+#########################
+#                       #
+#       General         #
+#                       #
+#########################
+
+*/
 
 *{
     color: #274E9B;
@@ -30,6 +52,16 @@ img{
     margin-right: auto;
     display: block;
 }
+
+/*
+
+#########################
+#                       #
+#       Font Rules      #
+#                       #
+#########################
+
+*/
 
 nav {
     display: flex;
@@ -106,4 +138,5 @@ input[type=submit]:active{
 input[type=checkbox] {
     display: inline-block;
     width: auto;
+    margin-bottom: 0;
 }

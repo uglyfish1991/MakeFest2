@@ -45,7 +45,8 @@ def viewing():
 
 @app.route('/thanks')
 def thanks():
-    return render_template('thanks.html')
-
+    person = Person.query.all()
+    last=person[-1]
+    return render_template('thanks.html',name=last)
 if __name__=="__main__":
     app.run(debug=True)

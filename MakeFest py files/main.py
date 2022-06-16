@@ -98,6 +98,39 @@ def options():
 
 
 def intro():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(f"""{bcolors.HEADER}
+
+                                  
+                                                            
+                                            ..              
+                                      :.    ::              
+                                      ^..  ::.:             
+                                     ::.: .:.:              
+                   .:.^::^::...    .:....:..:.              
+                   .....:^^^:    .::.......:.               
+                .....   .^^^.  .:...... .::.                
+                ..     .^^:..:.........:...                 
+                    .:^^^. :. ......::....                  
+                  ::!Y~:  ^. :^::. .:::..                   
+                .^^7&7^. .: :^^::. .::..                    
+               .^^^@#:^:.:.:^^^:. .::..                     
+               ^^^^@&^^^^:^^^^:.  ....                      
+               :^^:?@G^:^^....::::...                       
+                :^^:!GB?~^^........                         
+                 .:^^:~77~^^:..::..::.                      
+                    ..:::^^^^^:. :  :^:                     
+                      :::. .^^^.  :  .^:                    
+                     .:^^^  :^^^. .   :^                    
+                      .^:    .^:      ..                    
+                     .^:      ^:      .                     
+                    .^.       .^.                           
+                .  ::          :^                           
+              .:........   .:........                       
+                                                            
+                                                            
+                                                            """
+)
     fast_text(f"{bcolors.HEADER}               Welcome To\n Liverpool Central Library Server Management {bcolors.ENDC}\n\n")
     fast_text("Please enter the password\n")
     password=input("     >>    ")
