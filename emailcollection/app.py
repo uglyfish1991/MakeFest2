@@ -65,15 +65,23 @@ def index():
         person = Person.query.all()
         return render_template('index.html',person=person)
 
+#########################
+#                       #
+#       admin only      #
+#                       #
+#########################
+
+# should we add a log in for Ezra? This page isn't linked anywhere - unlikely anyone will find it
+
 @app.route('/view')
 def viewing():
-    person = Person.query.all()
+    person = Person.query.all() # for for loop
     return render_template('view.html',person=person)
 
 @app.route('/thanks')
 def thanks():
     person = Person.query.all()
-    last=person[-1]
+    last=person[-1] # so we can say 
     return render_template('thanks.html',name=last)
 
 #########################
