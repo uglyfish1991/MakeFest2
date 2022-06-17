@@ -1,12 +1,33 @@
+#########################
+#                       #
+#       Imports         #
+#                       #
+#########################
+# importing flask, redirect for try/except, render template, url for and request for the POST
+# importing SQL for the database
+# importing datetime for the date_created column, not necessarily needed
+
+
 from flask import Flask, redirect, render_template, url_for, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+
+#########################
+#                       #
+#   Variables/Classes   #
+#                       #
+#########################
+
+# naming app for the init
+# naming the database
 
 app= Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db=SQLAlchemy(app)
 
-class Person(db.Model):  #sets the class so we can refer to things as class.thingy
+# setting db class/model - specifying the columns needed, the data type, and if they can be null. 
+# can now refer to data as Person.name etc
+class Person(db.Model): 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(200),nullable=False)
     email = db.Column(db.String (150),nullable=False)
@@ -16,6 +37,12 @@ class Person(db.Model):  #sets the class so we can refer to things as class.thin
     date_created = db.Column(db.DateTime,default=datetime.utcnow)
     def __repr__(self):
         return '<Asset %r>' % self.id
+
+#########################
+#                       #
+#        Routes         #
+#                       #
+#########################
 
 @app.route('/', methods=['POST','GET'])
 def index():
@@ -48,5 +75,12 @@ def thanks():
     person = Person.query.all()
     last=person[-1]
     return render_template('thanks.html',name=last)
+
+#########################
+#                       #
+#     Initialsing       #
+#                       #
+#########################
+
 if __name__=="__main__":
     app.run(debug=True)
