@@ -20,7 +20,7 @@ from text_colours import *
 import datetime
 import os
 import time
-
+import sys
 
 #######################################
 #                                     #
@@ -84,7 +84,7 @@ def options():
         fast_text("What would you like to do? \n")
         options()
     elif main_option=="5":
-        print("this is where we need to fit fail2ban in - hoooooow?")
+        print(f"{bcolors.WARNING} The Server Management Tools cannot be accessed remotely. \nPlease this is where we need to fit fail2ban in - hoooooow?")
         fast_text("What would you like to do? \n")
         options()
     elif main_option=="6":
@@ -93,6 +93,9 @@ def options():
         os.system('cls' if os.name == 'nt' else 'clear')
         reboot_select=True
         intro()
+    elif main_option=="7":
+        fast_text("You will be logged out of the LCC system \n Thank you for using LCC Library Management")
+        sys.exit()
 
 
 
