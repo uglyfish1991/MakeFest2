@@ -48,8 +48,8 @@ def login():
         pass_changed=True
         return pin, pass_changed
 
-    fast_text(f"{bcolors.WARNING}         **WARNING** \nChanges made here will impact the whole system \nYou may need to log in again after making changes\n {bcolors.ENDC}")
-    fast_text(f"{bcolors.WARNING}         **NOTE** \nPasswords should be change regularly.\n Your password was last changed {bcolors.OKGREEN}0 months 0 weeks 0 days 0 hours and 2 minutes ago \n {bcolors.ENDC}")
+    fast_text(f"{bcolors.WARNING}         **WARNING** \nChanges made here will impact the whole system \nYou may need to log in again after making changes\n {bcolors.ENDC} \n")
+    fast_text(f"{bcolors.WARNING}         **NOTE** \nPasswords should be changed regularly.\n Your password was last changed {bcolors.OKGREEN}0 months 0 weeks 0 days 0 hours and 2 minutes ago \n {bcolors.ENDC}")
     wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
     fast_text(f"{bcolors.WARNING}Accessing System Root Password Settings \nCurrent Permissions: \n\n{bcolors.ENDC}")
     print(f"""{bcolors.OKGREEN} if password=="{pin}":
