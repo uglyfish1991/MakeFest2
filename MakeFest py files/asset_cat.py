@@ -21,7 +21,7 @@ import random
 #                                     #
 #######################################
 
-first_word=["The ", "My ", "His ","Her ","Our ","A "]
+first_word=["The ", "My ", "His ","Her ","Our ","A ", "Each ", ]
 adjective = ["Sleepy ", "Happy ", "Lonely ", "Rainy ", "Cheerful ", "Weary ", "Lost ", "Decayed ", "Secret ", "Hidden ", "Imagined "]
 noun = ["Raven", "Window", "Room", "Mirror", "Castle", "Ghost", "Path", "Tree", "Forest", "Mountain", "River", "Relic"]
 

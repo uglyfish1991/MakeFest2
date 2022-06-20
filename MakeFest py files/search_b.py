@@ -24,7 +24,8 @@ import time
 #######################################
 
 seen=False
-
+seen_before=False
+answers=["1","2","3","4"]
 #######################################
 #                                     #
 #          function start             #
@@ -32,14 +33,16 @@ seen=False
 #######################################
 
 def search_a(timeb): #takes variable from function call in main - couldn't do this any other way without circular imports?
-    global seen
-    answers=["1","2","3","4"]
-    fast_text("\n\nInitiating Search \n\n")
-    fast_text(f"{bcolors.WARNING}System Search currently semi-operational \nPlease build your search{bcolors.ENDC} \n\nPlease input your search term\n")
-    ans1=input("      >>    ")
-    fast_text("Please wait - search building\n")
-    wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
-    print(f" {bcolors.OKGREEN} if {ans1} in {bcolors.ENDC}")
+    global seen, seen_before
+    if not seen_before:
+
+        fast_text("\n\nInitiating Search \n\n")
+        fast_text(f"{bcolors.WARNING}System Search currently semi-operational \nPlease build your search{bcolors.ENDC} \n\nPlease input your search term\n")
+        ans1=input("      >>    ")
+        fast_text("Please wait - search building\n")
+        wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
+        print(f" {bcolors.OKGREEN} if {ans1} in {bcolors.ENDC}")
+        seen_before=True
     fast_text("Where are you searching? \nSelect from the following options: \n\n 1 - System Log \n 2 - System Settings \n 3 - User Database \n 4 - Asset Catalogue \n\n Please type 1, 2, 3 or 4")
     ans2=input("      >>    ")
 
@@ -56,10 +59,14 @@ def search_a(timeb): #takes variable from function call in main - couldn't do th
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
         fast_text(f"Searching for {ans1} in the {search_place} \n")
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
-        fast_text(f"{bcolors.OKCYAN} 1 matching item(s) found in {search_place}{bcolors.ENDC}")
+        fast_text(f"{bcolors.OKCYAN} 2 matching item(s) found in {search_place}{bcolors.ENDC}")
         our_search=datetime.datetime.now()
         print(f"""
-{bcolors.OKCYAN}<aa0ExASSET_DB_QUERY_ADD()> "ISBN: {ans1}03836627" <Asset 90237464> {bcolors.ENDC}
+<aa0Exffdo> System clear 300622 11:57:30.76821
+<aa0Exffdo> System clear 300622 13:57:30.18236
+<aa0Exffdo> System clear 300622 15:57:30.40923
+{bcolors.OKCYAN}<aa0ExSEARCH_USER_DB()> "090477" at {timeb} {bcolors.ENDC}
+{bcolors.OKCYAN}<aa0ExSEARCH_SYS_LOGS()> "090477" at {our_search} {bcolors.ENDC}
 
 """)
         fast_text("What would you like to do now? \n\n1 - Search Again? \n2 - Quit Search? \n Please type 1 or 2\n")
@@ -153,5 +160,3 @@ def search_a(timeb): #takes variable from function call in main - couldn't do th
             search_a(timeb)
         else:
             return
-
-search_a(5)
